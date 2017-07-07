@@ -47,7 +47,7 @@ for post in posts:
     excerpts = text.split("[BREAK]")[:-1]
     title = json['sm_api_title']
 
-    disclaimer = open("disclaimer.txt").read().encode('UTF-8')
+    disclaimer = open("disclaimer.txt", encoding='utf8').read()
 
     # Create a new comment inside the post
     comment = f"### {title}\n\n---\n"  # markdown title and separator
