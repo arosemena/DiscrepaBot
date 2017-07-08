@@ -1,1 +1,1 @@
-Resumén echo por el DiscrepaBot para /r/mexico, este bot es público, ajeno a cualquier partido politico, queda prohibido su uso para fines distintos al desarrollo social, pm /u/shif si notan algún problema
+Resumen hecho por el DiscrepaBot para /r/mexico. Este bot es público, ajeno a cualquier partido político. Quedo prohibido su uso para fines distintos al desarrollo social. PM /u/shif si notan algún problema.
