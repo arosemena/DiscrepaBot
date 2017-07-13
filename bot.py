@@ -45,7 +45,7 @@ for post in posts:
     # All good so far, extract the title and content from the api response
     text = json['sm_api_content']
     excerpts = text.split("[BREAK]")[:-1]
-    title = json['sm_api_title']
+    title = json['sm_api_title'].replace('\"', '"').replace("\'", "'")  # title escapes these chars for some reason
 
     disclaimer = open("disclaimer.txt", encoding='utf8').read()
 
@@ -53,7 +53,7 @@ for post in posts:
     comment = f"### {title}\n\n---\n"  # markdown title and separator
     for excerpt in excerpts:  # add a list item for every block of text
         comment += f"- {excerpt.strip()} \n"
-    comment += f"\n---\n^(**{disclaimer}**)" # and then comes the disclaimer
+    comment += f"\n---\n^(**{disclaimer}**)"  # and then comes the disclaimer
     comment += "\n\n [^(**Source**)](https://github.com/arosemena/DiscrepaBot)"
 
     post.reply(comment)  # Finally we post the comment and the job of the bot is done, for now...
