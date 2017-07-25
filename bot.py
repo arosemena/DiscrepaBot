@@ -56,7 +56,7 @@ for post in posts:
     comment += f"\n---\n^(**{disclaimer}**)"  # and then comes the disclaimer
     comment += "\n\n [^(**Source**)](https://github.com/arosemena/DiscrepaBot)"
 
-    comment = comment.replace('\"', '"').replace("\'", "'")  # title escapes these chars for some reason
+    comment = comment.replace('\\"', '"').replace("\\'", "'")  # title escapes these chars for some reason
 
     post.reply(comment)  # Finally we post the comment and the job of the bot is done, for now...
 
